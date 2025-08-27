@@ -2,8 +2,24 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+      #typing {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2em;
+        color: #333;
+        background: rgba(255,255,255,0.7);
+        padding: 0.5em 1em;
+        border-radius: 8px;
+        z-index: 10;
+        pointer-events: none;
+      }
+    </style>
   </head>
   <body>
+    <div id="typing"></div>
     <canvas id="myCanvas"></canvas>
     <script type="module" src="threeFlower.js"></script>
   </body>

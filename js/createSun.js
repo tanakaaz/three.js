@@ -14,10 +14,9 @@ export function createSunObjects() {
   // 太陽の光（環境光）
   const sunLight = new THREE.AmbientLight(0xFFFFFF, 0.5);
   sunLight.position.set(8000, 1000, 0);
-  sunLight.castShadow = true;
 
   // 物理太陽（球体メッシュ）
-  const sunGeo = new THREE.SphereGeometry(6000, 300, 300);
+  const sunGeo = new THREE.SphereGeometry(6000, 50, 50);
   const sunMat = new THREE.MeshPhongMaterial({ color: 0xFCCA00, wireframe:false });
   const sun = new THREE.Mesh(sunGeo, sunMat);
   sun.position.set(24000, 100, 0);

@@ -52,9 +52,9 @@ export function createPetalObject(material) {
   const mesh = new THREE.Mesh(geo, material.clone());
 
   mesh.position.set(
-    (Math.random()-0.5)*24000,
-    Math.random()*1000 + 2000,
-    (Math.random()-0.5)*24000
+    (Math.random())*3000,
+    Math.random()*1000 + 3000,
+    (Math.random()-0.5)*3000
   );
 
   mesh.userData = {
