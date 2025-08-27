@@ -68,13 +68,37 @@ meshFloor.receiveShadow = true; // 影を受け取る
 scene.add(meshFloor);
     
 // 球体を作成（ライトの影響を受ける材質に変更）
-const geometry = new THREE.SphereGeometry(300,7,7);
-const material = new THREE.MeshStandardMaterial( {color: 0xF0f0f0,wireframe:true} );
+const geometry = new THREE.SphereGeometry(1000,100,100);
+const material = new THREE.MeshStandardMaterial( {color: 0xF0f0f0} );
 // ,wireframe:true
 const sphere = new THREE.Mesh( geometry, material );
-sphere.position.set(0,300,0)
+sphere.position.set(0,1000,0)
 sphere.castShadow = true; // 影を落とす
 scene.add( sphere );
+// 球体を作成（ライトの影響を受ける材質に変更）
+const geometryNose = new THREE.SphereGeometry(70,100,100);
+const materialNose = new THREE.MeshStandardMaterial( {color: 0x000000} );
+// ,wireframe:true
+const sphereNose = new THREE.Mesh( geometryNose, materialNose );
+sphereNose.position.set(707,1000,700)
+sphereNose.castShadow = true; // 影を落とす
+scene.add( sphereNose );
+// 球体を作成（ライトの影響を受ける材質に変更）
+const geometryLeftEye = new THREE.SphereGeometry(70,100,100);
+const materialLeftEye = new THREE.MeshStandardMaterial( {color: 0x000000} );
+// ,wireframe:true
+const sphereLeftEye = new THREE.Mesh( geometryLeftEye, materialLeftEye );
+sphereLeftEye.position.set(800,1500,400)
+sphereLeftEye.castShadow = true; // 影を落とす
+scene.add( sphereLeftEye );
+// 球体を作成（ライトの影響を受ける材質に変更）
+const geometryRightEye = new THREE.SphereGeometry(70,100,100);
+const materialRightEye = new THREE.MeshStandardMaterial( {color: 0x000000} );
+// ,wireframe:true
+const sphereRightEye = new THREE.Mesh( geometryRightEye, materialRightEye );
+sphereRightEye.position.set(400,1500,800)
+sphereRightEye.castShadow = true; // 影を落とす
+scene.add( sphereRightEye );
 
 // 環境光を追加（全体を少し明るくする）
 const ambientLight = new THREE.AmbientLight(0x404040,10); // 薄いグレーの環境光（強度を下げる）
